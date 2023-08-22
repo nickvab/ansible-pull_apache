@@ -1,0 +1,27 @@
+- name: Tear down existing services
+  docker_compose:
+    project_src: "{{workdir}}"
+    state: absent # Specifying absent is the same as running docker-compose down.
+  register: "output"
+
+- debug:
+    var: output.stdout_lines
+
+- name: Stop all services
+  docker_compose:
+    project_src: "{{workdir}}"
+    build: false
+    stopped: true # Use with state present to stop all containers defined in the Compose file.
+  register: output 
+
+- debug:
+    var: output.stdout_lines
+
+- name: Create and start services
+  docker_compose:
+    project_src: "{{workdir}}" # Path to a directory containing a docker-compose.yml or docker-compose.yaml file.
+    build: true # Use with state present to always build images prior to starting the application.
+  register: output
+
+- debug:
+    var: output.stdout_lines

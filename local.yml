@@ -1,0 +1,24 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  become: true
+  vars:
+    # User to run ansible-pull as from cron
+    cron_user: root
+
+    # File that ansible will use for logs
+    logfile: /tmp/logs.txt
+
+    # Directory to where repository will be cloned
+    workdir: /opt/apache
+
+    repo_url: git@github.com:nickvab/ansible-pull_apache.git
+
+    private_key: /root/.ssh
+
+    ansible_bin: /usr/bin/
+  tasks:
+    - include_tasks: tasks/cron.yaml
+    - include_tasks: tasks/docker.yaml
+   
