@@ -15,9 +15,9 @@
 
     repo_url: git@github.com:nickvab/ansible-pull_apache.git
 
-    private_key: /root/.ssh
+      #    private_key: /root/.ssh
 
-    ansible_bin: /usr/bin/
+    ansible_bin: /usr/bin
   tasks:
     - include_tasks: tasks/cron.yaml
     - include_tasks: tasks/docker.yaml

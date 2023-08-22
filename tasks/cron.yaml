@@ -3,4 +3,4 @@
     user: "{{cron_user}}"
     name: "ansible"
     minute: "*/1"
-    job: "{{ansible_bin}}/ansible-pull -o -U {{repo_url}} -i hosts --key-file {{private_key}} >>{{ logfile }} 2>&1"
+    job: "{{ansible_bin}}/ansible-pull -o -U {{repo_url}} -i hosts >>{{ logfile }} 2>&1"
