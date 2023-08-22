@@ -11,7 +11,7 @@
     logfile: /tmp/logs.txt
 
     # Directory to where repository will be cloned
-    workdir: /root/.ansible/pull/X550JK/
+    #    workdir: /root/.ansible/pull/X550JK/
 
     repo_url: git@github.com:nickvab/ansible-pull_apache.git
 
