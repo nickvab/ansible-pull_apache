@@ -11,7 +11,7 @@
     logfile: /tmp/logs.txt
 
     # Directory to where repository will be cloned
-    workdir: /home/vnl/local_install
+    workdir: /home/vnl/local_install/ansible-pull-apache
 
     repo_url: git@github.com:nickvab/ansible-pull_apache.git
 
