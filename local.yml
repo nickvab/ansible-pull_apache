@@ -4,7 +4,7 @@
   gather_facts: false
   become: true
   single_branch: true
-    version: new
+  version: new
   vars:
     # User to run ansible-pull as from cron
     cron_user: root
