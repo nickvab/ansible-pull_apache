@@ -3,7 +3,7 @@
   connection: local
   gather_facts: false
   become: true
-  single_branch: yes
+  single_branch: true
     version: new
   vars:
     # User to run ansible-pull as from cron
