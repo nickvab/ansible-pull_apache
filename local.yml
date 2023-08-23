@@ -3,8 +3,6 @@
   connection: local
   gather_facts: false
   become: true
-  single_branch: yes
-  version: new
   vars:
     # User to run ansible-pull as from cron
     cron_user: root
@@ -13,7 +11,7 @@
     logfile: /tmp/logs.txt
 
     # Directory to where repository will be cloned
-    workdir: /root/.ansible/pull/X550JK/
+    workdir: /home/vnl/local_install
 
     repo_url: git@github.com:nickvab/ansible-pull_apache.git
 
