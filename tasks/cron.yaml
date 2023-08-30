@@ -4,3 +4,4 @@
     name: "ansible"
     minute: "*/1"
     job: "{{ ansible_bin }}/ansible-pull --directory={{ workdir }} -o -U {{ repo_url }} -i hosts --checkout 'new' >> {{ logfile }} 2>&1"
+    cron_file: cronfile
