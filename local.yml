@@ -5,7 +5,7 @@
   become: true
   vars:
     # User to run ansible-pull as from cron
-    cron_user: root
+    cron_user: vnl
 
     # File that ansible will use for logs
     logfile: /tmp/logs.txt
